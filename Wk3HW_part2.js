@@ -38,9 +38,9 @@ function greaterThanAHundred() {
     sum += numbers[i];
 }
     if (sum > 100) {
-        console.log("The sum of the numbers in the array is greater than 100");
+        return true;
     } else {
-        console.log("The sum is less than 100.")
+        return false
     }
 }
 greaterThanAHundred();
@@ -58,6 +58,7 @@ function getAverage() {
         sum += numbers[i];
     }
     avNumber = sum / numbers.length;
+    return avNumber;
     console.log(avNumber)
 }
 getAverage();
@@ -93,9 +94,11 @@ compareAverages();
 console.log("12.");
 function willBuyDrink(isHotOutside,moneyInPocket) {
     if (isHotOutside == true && moneyInPocket > 10.50) {
+        return true;
         console.log("You should buy a drink!");
     } else {
-    console.log("Too bad! Maybe there's a water fountain around here."); //alternate message
+        return false;
+        console.log("Too bad! Maybe there's a water fountain around here."); //alternate message
     }
 }
 willBuyDrink(true, 21); //true
